@@ -39,7 +39,10 @@ def hw6_str_to_list(word):
 
 
 def hw6_format_greeting(names, greeting, place):
-    """Return a formatted greeting string using a list with one name."""
+    """Return a formatted greeting string.
+
+    Uses a list with one name.
+    """
     name = names[0]
     return f"Hello, {name}! {greeting} to {place}"
 
@@ -50,7 +53,7 @@ def hw6_list_to_string(lst):
 
 
 def process_list(lst, new_value):
-    """Insert a new value at position 3 and delete the element at index 6."""
+    """Insert new value at position 3 and delete element at index 6."""
     lst.insert(2, new_value)
     del lst[6]
     return lst
