@@ -1,3 +1,4 @@
+#homework6
 def hw6_repl ():
     my_str = "www.my_site.com#about"
     str_new = my_str.replace("#","/", 1)
