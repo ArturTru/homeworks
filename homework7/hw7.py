@@ -1,6 +1,6 @@
 # homework7
 
-"""homework 7"""
+"""homework 7."""
 
 
 def hw7_1(a):
@@ -18,7 +18,7 @@ def hw7_2(b):
     exp = 10
     new_exp = b + exp
     lv_dict = {1: 15, 2: 25, 3: 35, 4: 45}
-    for level, required in lv_dict.items():
+    for _, required in lv_dict.items():
         if new_exp == required:
             return True
     return False
@@ -31,7 +31,7 @@ def hw7_3(h, m):
     else:
         period = "p.m."
 
-    if h == 0 or h == 12:
+    if h in (0, 12):
         hours = 12
     elif h > 12:
         hours = h - 12
