@@ -18,7 +18,6 @@ def hw8_cow_bull(a: int):
     a_list = list(str(a))
     b_list = list(str(b))
 
-
     def count(a_list, b_list):
         '''count function'''
         cows = 0
@@ -36,7 +35,7 @@ def hw8_cow_bull(a: int):
 
 
 def hw8_2(a, b):
-    '''two hm'''
+    '''two function'''
     if a == b:
         return False
     if a > b:
