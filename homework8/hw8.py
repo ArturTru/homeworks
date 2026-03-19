@@ -2,7 +2,6 @@
 
 """homework 8"""
 
-
 import random
 
 
@@ -24,9 +23,9 @@ def hw8_cow_bull(a: int):
         '''count function'''
         cows = 0
         bulls = 0
-        for i in range(len(a_list)):
-            for j in range(len(b_list)):
-                if a_list[i] == b_list[j]:
+        for i, a_digit in enumerate(a_list):
+            for j, b_digit in enumerate(b_list):
+                if a_digit == b_digit:
                     if i == j:
                         bulls += 1
                     else:
@@ -37,7 +36,7 @@ def hw8_cow_bull(a: int):
 
 
 def hw8_2(a, b):
-    '''two function'''
+    '''two hm'''
     if a == b:
         return False
     if a > b:
@@ -52,7 +51,6 @@ def hw8_statues(statues):
     arr = statues.copy()
     n = len(arr)
 
-    # Пузырьковая сортировка по возрастанию
     for i in range(n - 1):
         swapped = False
         for j in range(n - 1 - i):
@@ -62,7 +60,6 @@ def hw8_statues(statues):
         if not swapped:
             break
 
-    # Считаем пропуски между соседними статуями
     missing = 0
     for i in range(n - 1):
         diff = arr[i + 1] - arr[i]
@@ -70,4 +67,3 @@ def hw8_statues(statues):
             missing += diff - 1
 
     return missing
-
