@@ -74,7 +74,6 @@ def plus_one():
 
 """ex_5"""
 
-
 def is_pol():
     while True:
         try:
@@ -93,13 +92,12 @@ def is_pol():
 
 def file_stats(g):
     c = open(g).read()
-    l = c.count('\n') + 1 if c else 0
-    w = len(c.split())
-    let = sum(1 for x in c if x.isalpha())
-    s = "\nLines: " + str(l) + "\nWords: " + str(w) + "\nLetters: " + str(let)
+    lines = c.count('\n') + 1 if c else 0
+    words = len(c.split())
+    letters = sum(1 for x in c if x.isalpha())
+    s = "\nLines: " + str(lines) + "\nWords: " + str(words) + "\nLetters: " + str(letters)
     print(s)
     open(g, 'a').write(s)
-
 
 """ex_7"""
 
