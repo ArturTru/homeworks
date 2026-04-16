@@ -1,7 +1,9 @@
-# Ex
-"""ex_1"""
+"""
+Module for exam tasks.
+"""
 
 def process_string():
+    """Process a string of at least 15 characters as required."""
     while True:
         s = input("input ")
         if len(s) >= 15:
@@ -21,9 +23,9 @@ def process_string():
     s = s[8:]
     print(s)
 
-"""ex_2"""
 
 def print_sq():
+    """Ask for a number and print its square."""
     while True:
         try:
             n = int(input("input a number: "))
@@ -32,7 +34,9 @@ def print_sq():
         except ValueError:
             print("Error")
 
+
 def check():
+    """Ask for a number and print whether it is even."""
     while True:
         try:
             x = int(input("input a number: "))
@@ -41,9 +45,9 @@ def check():
         except ValueError:
             print("Error")
 
-"""ex_3"""
 
 def sum_n():
+    """Calculate sum from 1 to N using formula."""
     while True:
         try:
             n = int(input("input N: "))
@@ -56,11 +60,11 @@ def sum_n():
         except ValueError:
             print("Error")
 
-"""ex_4"""
 
 def plus_one():
+    """Take a list of digits, increment by 1, return as list."""
     while True:
-        my_input = input("dig. sep. by comma\space: ")
+        my_input = input("dig. sep. by comma\\space: ")
         try:
             part = my_input.replace(',', ' ').split()
             lst = [int(i) for i in part]
@@ -72,9 +76,9 @@ def plus_one():
         except ValueError:
             print("Error")
 
-"""ex_5"""
 
 def is_pol():
+    """Check if input number is palindrome."""
     while True:
         try:
             num = int(input("Input number: "))
@@ -88,20 +92,22 @@ def is_pol():
         s = str(num)
         print("TRUE" if s == s[::-1] else "FALSE")
 
-"""ex_6"""
 
 def file_stats(g):
-    c = open(g).read()
+    """Count lines, words, letters in a file and append results."""
+    with open(g, 'r', encoding='utf-8') as f:
+        c = f.read()
     lines = c.count('\n') + 1 if c else 0
     words = len(c.split())
     letters = sum(1 for x in c if x.isalpha())
     s = "\nLines: " + str(lines) + "\nWords: " + str(words) + "\nLetters: " + str(letters)
     print(s)
-    open(g, 'a').write(s)
+    with open(g, 'a', encoding='utf-8') as f:
+        f.write(s)
 
-"""ex_7"""
 
 def f():
+    """Create string from first n chars plus mirror."""
     s = input("string: ")
     while True:
         try:
@@ -117,17 +123,9 @@ def f():
     result = part + part[-2::-1]
     print(result)
 
-"""ex_8"""
-
-
-
-"""ex_9"""
-
-
-
-"""ex_10"""
 
 def decorator(*d_args, **d_kwargs):
+    """Decorator with parameters that prints its arguments."""
     decorator1 = d_args
     decorator2 = d_kwargs
 
